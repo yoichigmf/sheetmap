@@ -1,10 +1,7 @@
-# disaster_rmap
-report map 
-sample
+# sheetmap
 
-災害情報報告マップ
 
-Google Spread Sheetに格納した情報を利用してWEBMAPを描画する
+Google Spread Sheetに格納した情報を利用した空間情報基盤
 
 
 設定環境変数

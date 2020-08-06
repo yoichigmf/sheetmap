@@ -16,19 +16,20 @@ if (!session_id()) {
     session_start();
 }
 
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('LineMessageAPIChannelAccessToken'));
+//$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('LineMessageAPIChannelAccessToken'));
 //    id token の取得
 $client_id = getenv("CLIENT_ID");
-$redirect_uri = getenv("MapURL");
+//$redirect_uri = getenv("MapURL");
 
 $client_secret = getenv("CLIENT_SECRET");
 
 
-$log->addWarning( "client_id ${client_id}");
-$log->addWarning( "redirect_uri ${redirect_uri}");
-$log->addWarning( "client_secret ${client_secret}");
+//$log->addWarning( "client_id ${client_id}");
+//$log->addWarning( "redirect_uri ${redirect_uri}");
+//$log->addWarning( "client_secret ${client_secret}");
 
-if ( (!empty($client_id)) && (!empty($redirect_uri)) && (!empty($client_secret ))){
+//if ( (!empty($client_id)) && (!empty($redirect_uri)) && (!empty($client_secret ))){
+if ( (!empty($client_id)) &&  (!empty($client_secret ))){
 
   $code = $_GET['code'];
 
@@ -99,12 +100,6 @@ if ( (!empty($client_id)) && (!empty($redirect_uri)) && (!empty($client_secret )
   $data_json = base64_decode($val[1]);
   $data = json_decode($data_json);
 
-//echo '$data= ';
-//print_r($data);
-//echo '<br /><br />';
-
-//取得したデータを表示
-//print("[sub]:[" . $data->sub . "][対象ユーザーの識別子]<br />\n");
 
   $uname = GetUserNameUsingID( $data->sub );
 

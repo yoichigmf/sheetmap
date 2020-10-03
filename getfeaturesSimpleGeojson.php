@@ -37,6 +37,8 @@ $client = getGoogleSheetClient();
      $sheetname  = getenv('SHEET_NAME');
      if(empty($sheetname)) {
           //$sheetname = 'シート1';
+
+          // $sheetname = "Copy";
           $sheetname = GetFirstSheetName( $spreadsheetId, $client );
      }
  }

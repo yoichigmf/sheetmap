@@ -64,7 +64,7 @@ $uid_ar = array();   //  array of user id
 
 $ckey = 0;
 
-echo "\nsheetname ${sheetname}  ";  
+//echo "\nsheetname ${sheetname}  ";  
 
 foreach ($sheetd as $index => $cols) {
 
